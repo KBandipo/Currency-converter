@@ -41,6 +41,25 @@
       const dollarInput = document.querySelector(".dollar");
       const convertBtn = document.querySelector(".convert");
       const conversionRateInput = document.querySelector(".conversionRate");
+
+      let amount;
+
+      convertBtn.addEventListener("click", () => {
+        const naira = nairaInput.value;
+        const dollar = dollarInput.value;
+        const conversionRate = conversionRateInput.value;
+        if (naira) {
+          amount = conversionRate * naira;
+          dollarInput.value = amount;
+          // resultEl.style.display = "block";
+        }
+
+        if (dollar) {
+          amount = conversionRate / dollar;
+          nairaInput.value = amount;
+          // resultEl.style.display = "block";
+        }
+      });
     </script>
   </body>
 </html>
