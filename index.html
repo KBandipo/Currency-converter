@@ -4,12 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Currency Converter</title>
+    <style>
+      .container {
+        display: flex;
+        width: 150px;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .naira,
+      .dollar {
+        text-align: center;
+      }
+
+      .container input {
+        flex: 1;
+      }
+    </style>
   </head>
   <body>
     <h1>Naira to Dollar Currency Converter</h1>
     <div class="container">
-      <input id="naira" placeholder="Naira" />
-      <input id="dollar" placeholder="Dollar" />
+      <input class="naira" placeholder="Naira" />
+      <input class="dollar" placeholder="Dollar" />
       <button>Convert</button>
     </div>
   </body>
