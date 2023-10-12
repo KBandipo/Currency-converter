@@ -19,14 +19,28 @@
       .container input {
         flex: 1;
       }
+      .result {
+        display: none;
+      }
     </style>
   </head>
   <body>
     <h1>Naira to Dollar Currency Converter</h1>
+    <p class="result">You will receive: <span class="amount"></span></p>
     <div class="container">
       <input class="naira" placeholder="Naira" />
       <input class="dollar" placeholder="Dollar" />
-      <button>Convert</button>
+      <input class="conversionRate" placeholder="$ to #" />
+      <!-- <input /> -->
+      <button class="convert">Convert</button>
     </div>
+    <script>
+      const resultEl = document.querySelector(".result");
+      const amountEl = document.querySelector(".amount");
+      const nairaInput = document.querySelector(".naira");
+      const dollarInput = document.querySelector(".dollar");
+      const convertBtn = document.querySelector(".convert");
+      const conversionRateInput = document.querySelector(".conversionRate");
+    </script>
   </body>
 </html>
