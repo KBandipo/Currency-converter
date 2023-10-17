@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Currency Converter</title>
     <style>
+      html,
+      body {
+        max-width: 100%;
+      }
+      .body-container {
+        margin: 0 auto;
+        background-color: #ffcf96;
+        max-width: 900px;
+        padding: 20px;
+        height: 100vh;
+      }
       .container {
         display: flex;
         justify-content: center;
@@ -33,31 +44,37 @@
         display: flex;
         flex-direction: column;
         gap: 32px;
-        .convert {
-          font-size: 20px;
-          cursor: pointer;
-        }
+      }
+      .convert {
+        font-size: 20px;
+        cursor: pointer;
+      }
+      h1 {
+        font-size: 30px;
+        text-align: center;
       }
     </style>
   </head>
   <body>
-    <h1>Naira to Dollar Currency Converter</h1>
-    <div class="container">
-      <div class="conversion-container">
-        <div class="currency-container">
-          <p>#</p>
-          <input class="naira" placeholder="Naira" />
+    <div class="body-container">
+      <h1>Naira to Dollar Currency Converter</h1>
+      <div class="container">
+        <div class="conversion-container">
+          <div class="currency-container">
+            <p>#</p>
+            <input class="naira" placeholder="Naira" />
+          </div>
+          <div class="currency-container">
+            <p>$</p>
+            <input class="dollar" placeholder="Dollar" />
+          </div>
         </div>
-        <div class="currency-container">
-          <p>$</p>
-          <input class="dollar" placeholder="Dollar" />
-        </div>
-      </div>
 
-      <div class="section-container">
-        <input class="conversion-rate" placeholder="1$ to #" />
-        <!-- <input /> -->
-        <button class="convert">Convert</button>
+        <div class="section-container">
+          <input class="conversion-rate" placeholder="1$ to #" />
+          <!-- <input /> -->
+          <button class="convert">Convert</button>
+        </div>
       </div>
     </div>
     <script>
